@@ -1,0 +1,46 @@
+main{
+    padding-top: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.greetings{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #55555595;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.success h1 {
+    font-size: 1.5vw;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 1vw;
+}
+
+.right{
+    margin-left: 2vw;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    background-color: green;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

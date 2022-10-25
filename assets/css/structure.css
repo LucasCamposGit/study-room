@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Play', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    width: 100vw;
+    height: 5vw;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.logo{
+    font-size: 1.8vw;
+    cursor: pointer;
+    color: #000;
+}
+
+.links{
+    display: flex;
+    gap: 2vw;
+}
+
+.links li a, .links li button{
+    cursor: pointer;
+    color: #000;
+    white-space: nowrap;
+    font-size: 1.2vw;
+}
+
+.links li a:hover, .links li button:hover{
+    text-decoration: underline;
+}
