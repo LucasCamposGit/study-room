@@ -32,13 +32,11 @@ forms[0].addEventListener('submit', (e) => {
     }
 })
 forms[0].addEventListener('click', (e) => {
-    console.log(e)
     if (e.target === forms[0]) {
         divSignIn.classList.toggle('hide');
     }
 })
 forms[1].addEventListener('click', (e) => {
-    console.log(e)
     if (e.target === forms[1]) {
         divLogin.classList.toggle('hide');
     }

@@ -4,7 +4,7 @@
         }
     ?>  
     <header class="header">
-        <a href='index.php' class="logo">Studying room</a>
+        <a href='../../index.php' class="logo">Studying room</a>
 
 
         <ul class="links">
