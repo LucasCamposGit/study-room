@@ -113,7 +113,7 @@ if (isset($_POST['submit-login'])) {
                 <p>Here is a enviroment that you can use to study!</p>
                 <p>
                     Each flahscard is a piece of information that you can review any time you want.<br>
-                    To create a card, click on the right top of the page, "create cards", and it will be avaiable to revision <br>
+                    To create a card, click on the right top of the page, "create cards", and it will be avaiable to revision
                     in the "review cards" page.
                 </p>
             </div>
