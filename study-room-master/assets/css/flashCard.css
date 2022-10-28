@@ -1,0 +1,139 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 5vw;
+    grid-template-areas: 
+    "header header"
+     "form form";
+    justify-items: center;
+}
+
+
+.header{
+    grid-area: header;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    grid-area: form;
+    padding: 1vw;
+    width: 20vw;
+    border: 0.2vw solid #ccc;
+    min-height: 28vw;
+    border-radius: 0.3vw;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+}
+
+.type-question{
+    font-size: 1.2vw;
+}
+
+.btn {
+    width: 45%;
+    height: 2vw;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: #ccc;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+}
+
+#input {
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    background-color: #eee;
+    width: 95%;
+    border-radius: 0.5vw;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.card {
+    width: 95%;
+    min-height:  70%;   
+    max-height:  240px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.face {
+    border: 0.2vw solid #999;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    height: 17vw;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: auto;
+}
+
+
+.submiting{
+    grid-area: form;
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0.7vw;
+}
+
+#showing-front, #showing-back{
+    border: 0.2vw solid #ccc;
+    width: 40vw;
+    height: 10vw;
+    display: grid;
+    grid-auto-flow: row;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.submiting h1{
+    font-size: 1.5vw;
+    text-align: left;
+    color: #777;
+}
+
+#btn-edit, #btn-save{
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0.5vw;
+    width: 10vw;
+    height: 3vw;   
+}
+
+#btn-edit{
+    background-color: rgb(255, 155, 155);
+}
+
+#btn-edit:hover{
+    background-color: rgb(230, 66, 66);
+}
+
+#btn-save{
+    background-color: #237723;
+    justify-self: right;
+    transform: translateY(-3vw);
+}
+
+#btn-save:hover{
+    background-color: #2dbe2d;
+}
+
+.hide {
+    display: none;
+}
