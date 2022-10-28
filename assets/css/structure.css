@@ -12,9 +12,10 @@
 }
 
 .header{
+    border-bottom: 0.1vw solid #ccc;
+    background-color: #ffffff45;
     width: 100vw;
     height: 5vw;
-    background-color: #eee;
     position: absolute;
     top: 0;
     display: flex;
@@ -43,8 +44,20 @@
     color: #000;
     white-space: nowrap;
     font-size: 1.2vw;
+    background: none;
 }
 
 .links li a:hover, .links li button:hover{
     text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    height: 5vw;
+    width: 100vw;
+    border-top: 0.1vw solid #ccc;
+    background-image: linear-gradient(255deg,rgba(228, 243, 252, 0.7), rgba(210, 207, 252, 0.7));
 }
