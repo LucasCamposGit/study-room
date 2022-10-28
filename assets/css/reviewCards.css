@@ -5,8 +5,8 @@ body{
 }
 
 main{
-    background-image: linear-gradient(255deg,rgb(228, 243, 252), rgb(210, 207, 252));
-    background-size: cover;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 80% 20%;
     align-items: center;

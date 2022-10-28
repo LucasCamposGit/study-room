@@ -11,13 +11,15 @@
 }
 
 .container-inputs{
+    background-color: #fff;
+    border-radius: 1vw;
+    border: 0.1vw solid #e4e4e4 ;
     display: grid;
     row-gap: 1vw;
     grid-auto-flow: row;
     justify-items: center;
     align-content: center;
     align-items: center;
-    background-color: #fff;
     width: 30vw;
     height: 20vw;
 }
@@ -25,15 +27,11 @@
 .form div input{
     border: 0.1vw solid #bbb;
     background-color: #eee;
-    color: #000;
     border-radius: 0.1vw;
     width: 80%;
     padding: 0.3vw;
 }
 
-.form h1{
-    color: #000;
-}
 
 .form button{
     cursor: pointer;
