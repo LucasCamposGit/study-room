@@ -48,7 +48,6 @@ if (isset($_POST['submit-login'])) {
 
         if (isset($login) && sizeof($login) > 0) {
             session_start();
-            print_r($login);
             $_SESSION['login'] = $login[0][1];
         }
     } else {
@@ -73,8 +72,10 @@ if (isset($_POST['submit-login'])) {
     <script defer src="./assets/js/index.js"></script>
     <script defer src="./assets/js/login.js"></script>
 
+    <link rel="shortcut icon" href="./assets/images/favicon-16x16.png" type="image/x-icon">
 
-    <title>App</title>
+
+    <title>StudyRoom</title>
 </head>
 
 <body>
@@ -118,6 +119,7 @@ if (isset($_POST['submit-login'])) {
                 </p>
             </div>
 
+       
 
         <?php } else { ?>
             <div class="greetings">
@@ -133,11 +135,21 @@ if (isset($_POST['submit-login'])) {
                     
                 </p>
                 <p>Please, login to start your journey!</p>
+
+                <iframe width="490" height="300" src="https://www.youtube.com/embed/I5uBpnufxiA" title="How do flashcards work? (feat. Flashcards)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+
 
             <div class="container-info">
                 <h1>What is a flashcard?</h1>
                 <p>By google, a flashcard is a card containing a small amount of information, held up for students to see, as an aid to learning.</p>
+                <h1>How do I use this approach?</h1>
+                <p>
+                    Traditional use of flashcards is for memorization only. It is important to use the flashcards multiple times. Just like the first time you review any relatively new information, the first time you use the flashcards may be a bit overwhelming or frustrating because of the “forgetting” that has occurred. Here's the good news: with repetition, you will remember more and more, therefore forgetting less and less. The “forgetting curve” levels out, and the learning becomes “durable”. (Essentially, this means you will remember the information long term!)
+                    <br>
+                    <br>
+                    While there is some value to remembering key terms and other information, it's important to remember that in college there is far less memorization than in high school, as learners need to be able to apply and make meaning of information. Below are the steps to create your flashcards, along with approaches to test memory and make meaning of the information as you go along.
+                </p>
             </div>
         <?php }?>
 
@@ -159,6 +171,8 @@ if (isset($_POST['submit-login'])) {
         </div>
 
     </main>
+    
+    <?php require('./assets/templates/footer.php') ?>
 
 </body>
 
