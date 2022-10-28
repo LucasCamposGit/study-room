@@ -103,7 +103,8 @@ if (isset($_POST['submit-login'])) {
 
     <main>
         <aside>
-
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476187366410587"
+            crossorigin="anonymous"></script>
         </aside>
 
 
