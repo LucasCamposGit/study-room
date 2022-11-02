@@ -62,6 +62,8 @@ if ($flag) {
         <button id="btn-save" name="submit">Salvar</button>
     </form>
 
+    <?php require('footer.php') ?>                                                 
+
     <?php
 
 

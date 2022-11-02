@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
     align-items: center;
     display: grid;
@@ -20,7 +20,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     grid-area: form;
     padding: 1vw;
     width: 20vw;
@@ -46,17 +45,17 @@ body {
     font-size: 1vw;
 }
 
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 #input {
     padding: 0.5vw;
     font-size: 0.8vw;
     background-color: #eee;
     width: 95%;
     border-radius: 0.5vw;
-}
-
-.btn:hover {
-    background-color: #000;
-    color: #fff;
 }
 
 .card {
@@ -136,4 +135,41 @@ body {
 
 .hide {
     display: none;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width:700px) {
+    
+    .form {
+        position: absolute;
+        top: 25vw;
+        width: 90vw;
+        height: 100vw;
+        row-gap: 3vw;
+        border-radius: 2vw;
+        padding: 5vw;
+    }
+
+    .type-question {
+        font-size: 3.5vw;
+    }
+
+    #input {
+        font-size: 3vw;
+        padding: 1.5vw;
+    }
+
+    .face {
+        height: 90vw;
+    }
+
+    .btn {
+        font-size: 3vw;
+        height: 5vw;
+    }
+
 }
