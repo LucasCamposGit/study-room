@@ -14,7 +14,7 @@
             <?php } else {?>
                 <li><button id="signIn">sign in</button></li>
                 <li><button id="login">login</button></li>
-            <?php } ?>
+            <?php }  ?>
 
         </ul>
 

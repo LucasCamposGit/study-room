@@ -1,4 +1,6 @@
-<?php require("./assets/config/db_connect.php") ?>
+
+<?php session_start(); ?>
+<?php require("./assets/config/db_connect.php"); ?>
 <?php
 function  isEmailExists($db, $tablename, $email)
 {
@@ -47,7 +49,6 @@ if (isset($_POST['submit-login'])) {
         $login = $login->fetchAll();
 
         if (isset($login) && sizeof($login) > 0) {
-            session_start();
             $_SESSION['login'] = $login[0][1];
         }
     } else {
@@ -82,11 +83,7 @@ if (isset($_POST['submit-login'])) {
 </head>
 
 <body>
-    <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    ?>
+
     <header class="header">
         <a href='index.php' class="logo">Studying room</a>
 
@@ -140,7 +137,7 @@ if (isset($_POST['submit-login'])) {
                 </p>
                 <p>Please, login to start your journey!</p>
 
-                <iframe width="490" height="300" src="https://www.youtube.com/embed/I5uBpnufxiA" title="How do flashcards work? (feat. Flashcards)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/I5uBpnufxiA" title="How do flashcards work? (feat. Flashcards)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
 

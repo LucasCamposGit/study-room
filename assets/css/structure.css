@@ -10,6 +10,7 @@
     list-style: none;
     text-decoration: none;
     color: #0b0a2e;
+    font-size: 1.2vw;
 }
 
 .header{
@@ -63,5 +64,30 @@ footer {
 
 footer p {
     color: #fff;
+
+}
+
+
+@media screen and (max-width:700px) {
+    * {
+        font-size: 5vw;
+    }
+
+    body {
+        height: max-content;
+    }
+
+    .header, footer {
+        height: 15vw;
+    }
+
+    .header .logo {
+        font-size: 5vw;
+    }
+
+    .header ul li a, .header ul li button {
+        font-size: 3vw;
+    }
+
 
 }

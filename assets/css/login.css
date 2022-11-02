@@ -58,3 +58,17 @@
     font-size: 0.85vw;
     color: #333;
 }
+
+
+
+@media screen and (max-width: 700px) {
+    
+    .form{
+        height: 200%;
+    }
+
+    .container-inputs {
+        width: 90vw;
+        height: 50vw;
+    }
+}

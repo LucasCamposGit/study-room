@@ -66,3 +66,34 @@ aside{
     height: 100%;
     border-right: 0.1vw solid #ccc;
 }
+
+iframe{
+    width: 35vw;
+    height: 20vw;
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .greetings, .container-info{ 
+        padding: 15vw 0;
+        width: 100vw;
+        gap: 3vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .greetings p, .container-info p {
+        width: 90%;
+    }
+
+    iframe{
+        width: 90%;
+        height: 50vw;
+    }
+
+    
+}
