@@ -29,6 +29,7 @@ main{
     min-height: 28vw;
     border-radius: 0.3vw;
     gap: 1vw;
+    justify-items: center;
     transform: translate(10vw, 3vw);
 }
 
@@ -171,4 +172,51 @@ label p {
 
 .time:checked + label{
     outline: #000 solid 0.2vw; 
+}
+
+
+@media screen and (max-width:700px) {
+
+    main {
+        padding-top: 20vw;
+        display: flex;
+        gap: 6vw;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .card {
+        padding: 5vw;
+        row-gap: 5vw;
+        transform: none;
+        width: 90vw;
+        height: auto;
+    }
+
+    .title {
+        font-size: 5vw;
+    }
+
+    .btn {
+        font-size: 3vw;
+        height: 8vw;
+        width: 22vw;
+        padding: 0.5vw;
+    }
+
+    .face {
+        height: 70vw;
+    }
+
+    .card-number {
+        width: 7vw;
+        height: 7vw;
+        font-size: 5vw;
+    }
+
+    .card-config img {
+        width: 7vw;
+    }
+
 }

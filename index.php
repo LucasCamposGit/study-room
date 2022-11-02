@@ -1,60 +1,59 @@
-
 <?php session_start(); ?>
 <?php require("./assets/config/db_connect.php"); ?>
 <?php
-function  isEmailExists($db, $tablename, $email)
-{
+    function  isEmailExists($db, $tablename, $email)
+    {
 
-    $sql = "SELECT * FROM " . $tablename . " WHERE email='" . $email . "'";
+        $sql = "SELECT * FROM " . $tablename . " WHERE email='" . $email . "'";
 
-    $results = $db->query($sql);
+        $results = $db->query($sql);
 
-    $row = $results->fetchAll();
+        $row = $results->fetchAll();
 
-    return (is_array($row) && sizeof($row));
-}
+        return (is_array($row) && sizeof($row));
+    }
 
-if (isset($_POST['submit'])) {
+    if (isset($_POST['submit'])) {
 
-    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-        $sql = 'INSERT INTO users(email, password) VALUES (?, ?)';
-        $sql = $db->prepare($sql);
+            $sql = 'INSERT INTO users(email, password) VALUES (?, ?)';
+            $sql = $db->prepare($sql);
 
 
-        if (!isEmailExists($db, 'users', $_POST['email'])) {
-            try {
-                $sql->execute([$_POST['email'], $_POST['password']]);
-                $success = 'You created your account successfuly!, please login';
-            } catch (PDOException $e) {
-                echo "Error: " . $e;
+            if (!isEmailExists($db, 'users', $_POST['email'])) {
+                try {
+                    $sql->execute([$_POST['email'], $_POST['password']]);
+                    $success = 'You created your account successfuly!, please login';
+                } catch (PDOException $e) {
+                    echo "Error: " . $e;
+                }
+            } else {
+                $err = 'This e-mail already exists';
+            };
+        } else {
+            $err = 'An e-mail and password is necessary';
+        }
+    }
+
+    if (isset($_POST['submit-login'])) {
+
+        if (!empty($_POST['email-login']) && !empty($_POST['password-login'])) {
+
+            $email = $_POST['email-login'];
+            $password = $_POST['password-login'];
+
+            $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+            $login = $db->query($sql);
+            $login = $login->fetchAll();
+
+            if (isset($login) && sizeof($login) > 0) {
+                $_SESSION['login'] = $login[0][1];
             }
         } else {
-            $err = 'This e-mail already exists';
-        };
-    } else {
-        $err = 'An e-mail and password is necessary';
-    }
-}
-
-if (isset($_POST['submit-login'])) {
-
-    if (!empty($_POST['email-login']) && !empty($_POST['password-login'])) {
-
-        $email = $_POST['email-login'];
-        $password = $_POST['password-login'];
-
-        $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-        $login = $db->query($sql);
-        $login = $login->fetchAll();
-
-        if (isset($login) && sizeof($login) > 0) {
-            $_SESSION['login'] = $login[0][1];
+            $errLogin = 'E-mail or password are wrong';
         }
-    } else {
-        $errLogin = 'E-mail or password are wrong';
     }
-}
 
 ?>
 

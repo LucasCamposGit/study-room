@@ -1,14 +1,14 @@
 <?php
-session_start();
-require('../config/db_connect.php');
-require('../config/reviewList.php');
+    session_start();
+    require('../config/db_connect.php');
+    require('../config/reviewList.php');
 
-$front = $back = '';
-$flag = isset($_GET['card_id']);
-if ($flag) {
-    $front = htmlspecialchars($cards[$_GET['card_id']]['front']);
-    $back = htmlspecialchars($cards[$_GET['card_id']]['back']);
-}
+    $front = $back = '';
+    $flag = isset($_GET['card_id']);
+    if ($flag) {
+        $front = htmlspecialchars($cards[$_GET['card_id']]['front']);
+        $back = htmlspecialchars($cards[$_GET['card_id']]['back']);
+    }
 ?>
 
 <!DOCTYPE html>
