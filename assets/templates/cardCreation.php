@@ -1,7 +1,6 @@
 <?php
 require('../config/db_connect.php');
 require('../config/reviewList.php');
-require("header.php");
 
 $front = $back = '';
 $flag = isset($_GET['card_id']);
@@ -28,6 +27,8 @@ if ($flag) {
 </head>
 
 <body>
+
+    <?php require("header.php"); ?>
 
     <form class="form <?php if ($flag) echo "hide"; ?>">
         <p class="type-question">Type the card's front text</p>

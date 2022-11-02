@@ -141,6 +141,7 @@ input.addEventListener('input', () => {
         card.createBack();
         card.stringLimitation();
     }
+    
 });
 
 

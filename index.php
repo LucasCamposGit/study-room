@@ -72,6 +72,9 @@ if (isset($_POST['submit-login'])) {
     <script defer src="./assets/js/index.js"></script>
     <script defer src="./assets/js/login.js"></script>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476187366410587"
+     crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" href="./assets/images/favicon-16x16.png" type="image/x-icon">
 
 
