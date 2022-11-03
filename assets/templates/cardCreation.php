@@ -58,8 +58,8 @@
         <input type="text" name="card_id" hidden value="<?php if ($flag) {
                                                             echo $_GET['card_id'];
                                                         } ?>">
-        <button id='btn-edit' type="button">Editar</button>
-        <button id="btn-save" name="submit">Salvar</button>
+        <button id='btn-edit' type="button">Edit</button>
+        <button id="btn-save" name="submit">Save</button>
     </form>
 
     <?php require('footer.php') ?>                                                 
@@ -72,7 +72,7 @@
         if (!(strlen($_POST['front']) > 600)) {
             $front = $_POST['front'];
             $back = $_POST['back'];
-            $user_id = $_SESSION['login'];
+            $user_id = $_SESSION['id'];
             $card_id;
             $sql;
 
@@ -92,8 +92,8 @@
 
                 try {
                     $sql->execute([$front, $back, $user_id]);
-                } catch (\PDOException $d) {
-                    throw new \PDOException($d->getMessage(), $d->getCode());
+                } catch (PDOException $d) {
+                    throw new PDOException($d->getMessage(), $d->getCode());
                 }
             }
         }

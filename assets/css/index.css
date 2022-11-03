@@ -89,6 +89,9 @@ iframe{
     .greetings p, .container-info p {
         width: 90%;
     }
+    .container-info ol {
+        padding: 5vw;
+    }
 
     iframe{
         width: 90%;

@@ -187,6 +187,8 @@ label p {
     }
     
     .card {
+        border: 0.9vw solid #ccc;
+        border-radius: 3%;
         padding: 5vw;
         row-gap: 5vw;
         transform: none;
@@ -206,17 +208,25 @@ label p {
     }
 
     .face {
+        border: 0.9vw solid #999;
+        border-radius: 5%;
         height: 70vw;
     }
 
     .card-number {
+        left: 3vw;
+        top: 3vw;
         width: 7vw;
         height: 7vw;
         font-size: 5vw;
     }
 
+
+
     .card-config img {
         width: 7vw;
+        right: 3vw;
+        top: 3vw;
     }
 
 }
