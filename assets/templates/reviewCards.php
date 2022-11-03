@@ -36,7 +36,7 @@
             <button class="btn turn">turn card's face</button>
             
         </div>
-
+         
     
         <div class="time-container">
             <h1>Select a kind of revision: </h1>

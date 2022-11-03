@@ -41,6 +41,7 @@ forms[1].addEventListener('click', (e) => {
         divLogin.classList.toggle('hide');
     }
 })
+
 signIn.addEventListener('click', () => {
     divSignIn.classList.toggle('hide');
 })

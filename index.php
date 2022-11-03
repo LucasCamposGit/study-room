@@ -46,8 +46,10 @@
             $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
             $login = $db->query($sql);
             $login = $login->fetchAll();
+            print_r($login);
 
             if (isset($login) && sizeof($login) > 0) {
+                $_SESSION['id'] = $login[0][0];
                 $_SESSION['login'] = $login[0][1];
             }
         } else {
